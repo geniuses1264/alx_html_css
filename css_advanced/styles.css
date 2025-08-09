@@ -194,7 +194,8 @@ margin-right: 30px;
   left: 45%;
   transform: translate(-50%, -50%);
   font-size: 50px;
-  width: 50px;
+  max-width: 40;
+  width: 35px;
 }
 
 

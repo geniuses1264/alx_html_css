@@ -22,7 +22,7 @@
 
 🧠 Hero Section – Eye-catching heading with a clear call-to-action
        
-       ![alt text](CSS_ADVANCE.png) 
+![alt text](CSS_ADVANCE.png) 
 
 ⭐ Instructor Cards – Features pro smile teachers with awards
 
