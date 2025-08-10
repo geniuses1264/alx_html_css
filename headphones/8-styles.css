@@ -67,6 +67,7 @@ header {
   padding: 0 80px;
 }
 
+
 .menu {
   display: flex;
 }
@@ -464,23 +465,3 @@ h2 {
 
 
 
-
-
-  /*#What-we-do{
-    width: 80%;
-    padding: 10px 40px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .What-we-do-section{
-    width: 60%;
-    margin: 0 auto;
-    padding: 20px;
-  }
-   #icons-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-   }*/

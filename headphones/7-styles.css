@@ -188,6 +188,7 @@ p {
     flex-wrap: wrap;
     gap: 10px;
    }
+
 #What-we-do{
     width: 80%;
     padding: 10px 40px;
@@ -227,6 +228,38 @@ p {
    #icons-container img {
   display: inline-block;
 }
+/* Base style for services */
+.service {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0; /* start invisible for animation */
+  transform: translateY(20px); /* slight downward position */
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Hover effect */
+.service:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Fade and slide up */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger animation delays */
+#icons-container .service:nth-child(1) { animation-delay: 0.2s; }
+#icons-container .service:nth-child(2) { animation-delay: 0.4s; }
+#icons-container .service:nth-child(3) { animation-delay: 0.6s; }
+#icons-container .service:nth-child(4) { animation-delay: 0.8s; }
+
+
 
 /* OUR RESULTS SECTION */
 #our-results {
@@ -251,6 +284,30 @@ p {
   font-size: 1.8rem;
   padding-bottom: 20px;
 }
+/* Base style for .clip-path elements */
+/* continuous floating animation */
+.clip-path {
+  /* keep whatever layout styles you already have */
+  transition: transform 280ms ease, box-shadow 280ms ease;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+/* pause animation on hover and apply the hover transform */
+.clip-path:hover {
+  animation-play-state: paused;         /* STOP the keyframe that modifies transform */
+  transform: scale(1.08) rotate(2deg); /* now the hover transform takes effect */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+  z-index: 10;                          /* bring it above neighbors if needed */
+  cursor: pointer;
+}
+
+/* keyframes that previously animated transform */
+@keyframes floatUpDown {
+  0%, 100% { transform: translateY(0); }
+  50%     { transform: translateY(-8px); }
+}
+
+
 
 .our {
   padding: 30px;
@@ -464,23 +521,3 @@ h2 {
 
 
 
-
-
-  /*#What-we-do{
-    width: 80%;
-    padding: 10px 40px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .What-we-do-section{
-    width: 60%;
-    margin: 0 auto;
-    padding: 20px;
-  }
-   #icons-container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-   }*/
